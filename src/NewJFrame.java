@@ -313,7 +313,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarActionPerformed
- 
+        generarCURP();
     }//GEN-LAST:event_btnGenerarActionPerformed
 
     private void tgbtAparecerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tgbtAparecerActionPerformed
@@ -347,7 +347,7 @@ public class NewJFrame extends javax.swing.JFrame {
         showMessageDialog(this,"Campos vaciados con éxito.");
     }//GEN-LAST:event_btnVaciarActionPerformed
     
-    public void generarCurp(){
+    public void generarCURP(){
         if(validaCampos(txtPaterno));
         else if(validaCampos(txtMaterno));
         else if (validaCampos(txtNombres));
