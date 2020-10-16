@@ -25,7 +25,8 @@ public class NewJFrame extends javax.swing.JFrame {
         super.setResizable(false);
         super.setLocationRelativeTo(null);
         dcFecha.setVisible(false);
-      
+        btnGenerar.setEnabled(false);
+        habilitarBoton();
     }
 
     /**
@@ -313,7 +314,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarActionPerformed
-        generarCURP();
+       generarCURP();
     }//GEN-LAST:event_btnGenerarActionPerformed
 
     private void tgbtAparecerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tgbtAparecerActionPerformed
@@ -346,7 +347,14 @@ public class NewJFrame extends javax.swing.JFrame {
         txtCURP.setText("");
         showMessageDialog(this,"Campos vaciados con éxito.");
     }//GEN-LAST:event_btnVaciarActionPerformed
-    
+    public void habilitarBoton(){
+         if(txtNombres.getText().trim().length()>0){
+            btnGenerar.setEnabled(true);
+            
+        }else{
+            btnGenerar.setEnabled(false);
+        }
+    }
     public void generarCURP(){
         if(validaCampos(txtPaterno));
         else if(validaCampos(txtMaterno));
